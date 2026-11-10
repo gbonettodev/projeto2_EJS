@@ -1,0 +1,17 @@
+<%- include('partials/head', { titulo: 'Entrar' }) %>
+<main class="login-page">
+  <section class="login-art" aria-label="Apresentação do Bonettocenter">
+    <a class="brand brand-light" href="/login"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9.25 7.25h7.1a5.15 5.15 0 0 1 3.49 8.94A5.35 5.35 0 0 1 17 25H9.25V7.25Zm4 3.5v4h3a2 2 0 1 0 0-4h-3Zm0 7.4v3.35h3.4a1.68 1.68 0 0 0 0-3.35h-3.4Z" fill="currentColor" stroke="none"/></svg></span><span class="brand-name">Bonetto<span>center</span><small>GESTÃO DE PRODUTOS</small></span></a>
+    <div class="art-copy"><div class="eyebrow"><span></span> GESTÃO SIMPLES, VISÃO COMPLETA</div><h1>Produtos e grupos,<br>em <em>harmonia.</em></h1><p>Organize seu catálogo e conecte cada produto à categoria certa.</p><div class="relationship-card"><div class="relationship-node"><span>01</span><strong>Grupos</strong><small>Eletrônicos · Periféricos</small></div><div class="relationship-link"><i></i><span>1 → N</span><i></i></div><div class="relationship-node"><span>02</span><strong>Produtos</strong><small>Itens do seu catálogo</small></div></div></div>
+    <div class="art-footer">CATÁLOGO BONETTOCENTER</div>
+  </section>
+  <section class="login-panel"><div class="login-box">
+    <div class="mobile-brand"><span class="brand-mark"><svg viewBox="0 0 32 32"><path d="M9.25 7.25h7.1a5.15 5.15 0 0 1 3.49 8.94A5.35 5.35 0 0 1 17 25H9.25V7.25Zm4 3.5v4h3a2 2 0 1 0 0-4h-3Zm0 7.4v3.35h3.4a1.68 1.68 0 0 0 0-3.35h-3.4Z" fill="currentColor" stroke="none"/></svg></span><span class="brand-name">Bonetto<span>center</span></span></div>
+    <div class="form-kicker">BEM-VINDO DE VOLTA</div><h2>Acesse sua conta</h2><p class="login-intro">Entre para gerenciar produtos e grupos.</p>
+    <%- include('partials/flash', { erro }) %>
+    <form action="/login" method="POST" class="form-stack"><div class="field-group"><label for="email">E-mail</label><div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m4.5 7 7.5 5.5L19.5 7"/></svg><input id="email" name="email" type="email" autocomplete="username" value="<%= email %>" placeholder="voce@exemplo.com" required autofocus></div></div>
+      <div class="field-group"><div class="label-row"><label for="senha">Senha</label><span class="field-hint">Acesso seguro</span></div><div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10" width="15" height="10" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 4v2"/></svg><input id="senha" name="senha" type="password" autocomplete="current-password" placeholder="Sua senha" required></div></div>
+      <button class="button button-primary button-wide" type="submit">Entrar <span aria-hidden="true">→</span></button></form>
+    <div class="login-hint"><span class="hint-shield">✓</span><span>Acesso protegido por autenticação segura.</span></div>
+  </div><footer class="login-foot">© 2026 Bonettocenter</footer></section>
+</main></body></html>
